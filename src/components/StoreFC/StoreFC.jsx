@@ -1,23 +1,23 @@
 import React from 'react'
-import classes from './store.module.css'
+// import classes from './store.module.css'
 
 export function StoreFC(props) {
     const { shopItem } = props
 
   return (
-    <div className={classes["main-content"]}>
+    <div className="main-content">
         <h2>{ shopItem.brand }</h2>
         <h1>{ shopItem.title }</h1>
         <h3>{ shopItem.description }</h3>
-        <div className={classes["description"]}>
+        <div className="description">
             { shopItem.descriptionFull }
         </div>
-        <div className={[classes["highlight-window"], classes["mobile"]].join(' ')}>
-            <div className={classes["highlight-overlay"]}></div>
+        <div className="highlight-window  mobile">
+            <div className="highlight-overlay"></div>
         </div>
-        <div className={classes["divider"]}></div>
-        <div className={classes["purchase-info"]}>
-            <div className={classes["price"]}>{ shopItem.currency }{ shopItem.price.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) }</div>
+        <div className="divider"></div>
+        <div className="purchase-info">
+            <div className="price">{ shopItem.currency }{ shopItem.price.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) }</div>
             <button>Добавить в корзину</button>
         </div>
     </div>
