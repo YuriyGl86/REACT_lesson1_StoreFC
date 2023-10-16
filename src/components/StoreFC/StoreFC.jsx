@@ -17,7 +17,7 @@ export function StoreFC(props) {
         </div>
         <div className={classes["divider"]}></div>
         <div className={classes["purchase-info"]}>
-            <div className={classes["price"]}>{ shopItem.currency }{ shopItem.price }</div>
+            <div className={classes["price"]}>{ shopItem.currency }{ shopItem.price.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) }</div>
             <button>Добавить в корзину</button>
         </div>
     </div>
